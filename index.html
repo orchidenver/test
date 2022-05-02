@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/icons/favicon-lf.png">
     <title>Libera Foundation - Main Page</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/styles.css">
     <!-- <script defer src="/dest/js/libs/lib_pet.js"></script>
 	<script defer src="js/js.js"></script> -->
@@ -16,8 +17,9 @@
 	<! [endif]-->
   </head>
   <body>
-    <header class="wrapper">
-      <div class="main-header">
+    <div class="helper"></div>
+    <header class="header">
+      <div class="main-header wrapper">
         <a href="index.html" class="main-header__logo">
           <svg class="main-header__svg" width="73" height="104" fill="none" xmlns="http://www.w3.org/2000/svg">
             <title>Logo</title>
@@ -133,7 +135,7 @@
             <li><a href="#operation" class="main-navigation__item">How it works</a></li>
             <li><a href="#app" class="main-navigation__item">About the app</a></li>
             <li><a href="#service" class="main-navigation__item">Who we serve</a></li>
-            <li><a href="#team" class="main-navigation__item">Team</a></li>
+            <li><a href="#board__team" class="main-navigation__item">Team</a></li>
           </ul>
         </nav>
         <ul class="main-header__lang">
@@ -154,7 +156,7 @@
       </div>
     </header>
     <!-- ABOUT -->
-    <section class="about wrapper">
+    <section id="about" class="about wrapper">
       <div class="about__content">
         <h1 class="sr-only"></h1>
         <p class="about__header"> Liberating people by Unlocking the power of data </p>
@@ -310,46 +312,107 @@
         </div>
       </div>
       <!-- CAROUSEL -->
-      <div class="carousel" id="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-slides">
-            <div class="carousel-item">
-              <figure class="content__figure"><img src="./img/Process/1.jpg" alt="" class="content__img"></figure>
-              <p class="content__para"> A Customer comes to the store </p>
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="carousel-item swiper-slide">
+              <figure class="content__figure"><img data-src="./img/Process/1.jpg" alt="" class="content__img swiper-lazy"></figure>
+              <p class="content__para wiper-lazy-preloader"> A Customer comes to the store </p>
+              <div class="swiper-lazy-preloader"></div>
             </div>
-            <div class="carousel-item">
-              <figure class="content__figure"><img src="./img/Process/2.jpg" alt="" class="content__img"></figure>
-              <p class="content__para"> Shopkeeper is already equiped with Libera POS app which he uses to scan and sell the goods </p>
+          </div>
+          <div class="swiper-slide">
+            <div class="carousel-item swiper-slide">
+              <figure class="content__figure"><img data-src="./img/Process/2.jpg" alt="" class="content__img swiper-lazy"></figure>
+              <p class="content__para wiper-lazy-preloader"> Shopkeeper is already equiped with Libera POS app which he uses to scan and sell the goods </p>
+              <div class="swiper-lazy-preloader"></div>
             </div>
-            <div class="carousel-item">
-              <figure class="content__figure"><img src="./img/Process/3.jpg" alt="" class="content__img"></figure>
-              <p class="content__para"> With the help of blockchain, the app validates and collects every bit of data from the purchase like SCU ID, category, price, quantity, time and location </p>
+          </div>
+          <div class="swiper-slide">
+            <div class="carousel-item swiper-slide">
+              <figure class="content__figure"><img data-src="./img/Process/3.jpg" alt="" class="content__img swiper-lazy"></figure>
+              <p class="content__para wiper-lazy-preloader"> With the help of blockchain, the app validates and collects every bit of data from the purchase like SCU ID, category, price, quantity, time and location </p>
+              <div class="swiper-lazy-preloader"></div>
             </div>
+          </div>
+          <div class="swiper-slide swiper-slide">
             <div class="carousel-item">
-              <figure class="content__figure"><img src="./img/Process/4.jpg" alt="" class="content__img"></figure>
-              <p class="content__para"> This data is further distributed to Libera Data Ocean which securely stores it </p>
+              <figure class="content__figure"><img data-src="./img/Process/4.jpg" alt="" class="content__img swiper-lazy"></figure>
+              <p class="content__para wiper-lazy-preloader"> This data is further distributed to Libera Data Ocean which securely stores it </p>
+              <div class="swiper-lazy-preloader"></div>
             </div>
+          </div>
+          <div class="swiper-slide swiper-slide">
             <div class="carousel-item">
-              <figure class="content__figure"><img src="./img/Process/5.jpg" alt="" class="content__img"></figure>
-              <p class="content__para"> Using the unique AI and ML algorithms, we process and structures the data to create smart recommendations, optimize inventories and forecast demand </p>
+              <figure class="content__figure"><img data-src="./img/Process/5.jpg" alt="" class="content__img swiper-lazy"></figure>
+              <p class="content__para wiper-lazy-preloader"> Using the unique AI and ML algorithms, we process and structures the data to create smart recommendations, optimize inventories and forecast demand </p>
+              <div class="swiper-lazy-preloader"></div>
             </div>
+          </div>
+          <div class="swiper-slide swiper-slide">
             <div class="carousel-item">
-              <figure class="content__figure"><img src="./img/Process/6.jpg" alt="" class="content__img"></figure>
-              <p class="content__para"> Thanks to Web 3.0 Libera is able to further sell this high value data to FinTechs, MNCs and as an incentive shares the customized projections with store owners to improve their business </p>
+              <figure class="content__figure"><img data-src="./img/Process/6.jpg" alt="" class="content__img swiper-lazy"></figure>
+              <p class="content__para wiper-lazy-preloader"> Thanks to Web 3.0 Libera is able to further sell this high value data to FinTechs, MNCs and as an incentive shares the customized projections with store owners to improve their business </p>
+              <div class="swiper-lazy-preloader"></div>
             </div>
           </div>
         </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <!-- <div class="carousel" id="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-slides">
+                <div class="carousel-item">
+                    <figure class="content__figure"><img src="./img/Process/1.jpg" alt="" class="content__img"></figure>
+                    <p class="content__para">
+                        A Customer comes to the store
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <figure class="content__figure"><img src="./img/Process/2.jpg" alt="" class="content__img"></figure>
+                    <p class="content__para">
+                        Shopkeeper is already equiped with Libera POS app which he uses to scan and sell the goods
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <figure class="content__figure"><img src="./img/Process/3.jpg" alt="" class="content__img"></figure>
+                    <p class="content__para">
+                        With the help of blockchain, the app validates and collects every bit of data from the purchase like SCU ID, category, price, quantity, time and location
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <figure class="content__figure"><img src="./img/Process/4.jpg" alt="" class="content__img"></figure>
+                    <p class="content__para">
+                        This data is further distributed  to Libera Data Ocean which securely stores it
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <figure class="content__figure"><img src="./img/Process/5.jpg" alt="" class="content__img"></figure>
+                    <p class="content__para">
+                        Using the unique AI and ML algorithms, we process and structures the data to create smart recommendations, optimize inventories and forecast demand
+                    </p>
+                </div>
+                <div class="carousel-item">
+                    <figure class="content__figure"><img src="./img/Process/6.jpg" alt="" class="content__img"></figure>
+                    <p class="content__para">
+                        Thanks to Web 3.0 Libera is able to further sell this high value data to FinTechs, MNCs and as an incentive shares the customized projections with store owners to improve their business
+                    </p>
+                </div>
+            </div>
+        </div>
         <a href="#" class="carousel-prev" data-slide="prev">
-          <svg class="carousel-prev-icon" width="38" height="38" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="19" cy="19" r="19" fill="#7289E9" fill-opacity=".2" />
-            <path d="M9.293 18.293a1 1 0 000 1.414l6.364 6.364a1 1 0 001.414-1.414L11.414 19l5.657-5.657a1 1 0 00-1.414-1.414l-6.364 6.364zM27 18H10v2h17v-2z" fill="#fff" /></svg>
+            <svg class="carousel-prev-icon" width="38" height="38" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="19" cy="19" r="19" fill="#7289E9" fill-opacity=".2"/><path d="M9.293 18.293a1 1 0 000 1.414l6.364 6.364a1 1 0 001.414-1.414L11.414 19l5.657-5.657a1 1 0 00-1.414-1.414l-6.364 6.364zM27 18H10v2h17v-2z" fill="#fff"/></svg>
         </a>
         <a href="#" class="carousel-next" data-slide="next">
-          <svg class="carousel-prev-icon" width="38" height="38" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle r="19" transform="matrix(-1 0 0 1 19 19)" fill="#7289E9" fill-opacity=".2" />
-            <path d="M28.707 18.293a1 1 0 010 1.414l-6.364 6.364a1 1 0 01-1.414-1.414L26.586 19l-5.657-5.657a1 1 0 011.414-1.414l6.364 6.364zM11 18h17v2H11v-2z" fill="#fff" /></svg>
+            <svg class="carousel-prev-icon" width="38" height="38" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="19" transform="matrix(-1 0 0 1 19 19)" fill="#7289E9" fill-opacity=".2"/><path d="M28.707 18.293a1 1 0 010 1.414l-6.364 6.364a1 1 0 01-1.414-1.414L26.586 19l-5.657-5.657a1 1 0 011.414-1.414l6.364 6.364zM11 18h17v2H11v-2z" fill="#fff"/></svg>
         </a>
-      </div>
+    </div> -->
     </section>
     <!-- APP -->
     <section id="app" class="app wrapper">
@@ -371,7 +434,7 @@
     </section>
     <!-- PERSONNEL -->
     <section id="board" class="personnel wrapper">
-      <h2 class="personnel__title">Team</h2>
+      <h2 id="board__team" class="personnel__title">Team</h2>
       <ul id="team" class="personnel__team team">
         <li class="team__block">
           <figure><img src="./img/Team/mw.jpg" alt="Max Ward"></figure>
@@ -454,18 +517,12 @@
               <p class="team__name"> Max Ward </p>
               <p class="team__position"> CEO & Founder </p>
               <p class="team__experience"> Over 10 years APAC Sales to MNCs, Founder & CEO OpenPort </p>
-              <div class="social-i">
-                <ul class="test-ul">
-                  <li class="test-li">
-                    <a class="test-a" href="https://www.linkedin.com/in/maxwardhk/" target="_blank">
-                      <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <title>Linkedin link</title>
-                        <path d="M13.3 7.3c-2.8 0-5.1 2.3-5.1 5.1v5.1c0 .4.4.8.8.8h1.8c.4 0 .8-.4.8-.8v-5.1c0-.9.8-1.7 1.7-1.7h.2c.9.1 1.5.9 1.5 1.8v5.1c0 .4.4.8.8.8h1.8c.4 0 .8-.4.8-.8v-5.1c0-2.9-2.3-5.2-5.1-5.2zM3.4 8.1h2.4c.4 0 .8.4.8.8v8.7c0 .4-.4.8-.8.8H3.4c-.4 0-.8-.4-.8-.8V8.9c0-.4.4-.8.8-.8zM4.6 6.6a2 2 0 100-4 2 2 0 000 4z" fill="#7289E9" />
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              <a class="test-a" href="https://www.linkedin.com/in/maxwardhk/" target="_blank">
+                <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <title>Linkedin link</title>
+                  <path d="M13.3 7.3c-2.8 0-5.1 2.3-5.1 5.1v5.1c0 .4.4.8.8.8h1.8c.4 0 .8-.4.8-.8v-5.1c0-.9.8-1.7 1.7-1.7h.2c.9.1 1.5.9 1.5 1.8v5.1c0 .4.4.8.8.8h1.8c.4 0 .8-.4.8-.8v-5.1c0-2.9-2.3-5.2-5.1-5.2zM3.4 8.1h2.4c.4 0 .8.4.8.8v8.7c0 .4-.4.8-.8.8H3.4c-.4 0-.8-.4-.8-.8V8.9c0-.4.4-.8.8-.8zM4.6 6.6a2 2 0 100-4 2 2 0 000 4z" fill="#7289E9" />
+                </svg>
+              </a>
             </div>
             <div class="carousel-item">
               <figure><img src="./img/Team/nr.jpg" alt="Nikita Ryabuhin"></figure>
@@ -596,94 +653,96 @@
         </a>
       </div>
     </section>
-    <footer id="footer" class="wrapper">
-      <div class="footer__navigation">
-        <a href="index.html" class="footer__logo">
-          <svg width="67" height="67" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <title>Logo</title>
-            <path d="M14.634 9.008a6.365 6.365 0 003.403.426c2.807-1.918 9.444-5.713 17.866-5.116 13.358.98 25.992 12.706 27.226 27.714 1.063 12.876-6.424 25.624-18.803 30.613-13.995 5.67-28.331-1.45-35.052-9.38-4.765-5.671-7.317-12.92-7.36-20.338 0-1.236-1.914-1.236-1.914 0 .128 13.942 8.806 26.605 21.908 31.508 13.187 4.946 28.587.725 37.477-10.19.17-.213.468-.554.766-.98.34-.427 6.764-9.167 6.849-20.338.042-10.787-5.913-22.128-15.782-28.183C33.904-5.872 12.08 4.275 12.08 6.876c0 .682 1.49 1.705 2.553 2.132z" fill="#fff" />
-            <path d="M49.644 24.23c-5.488-3.028-11.018-6.098-16.506-9.125-2.595 1.535-3.275 1.961-5.87 3.539V37.19c2 1.15 3.999 2.302 6.04 3.453v-7.376c3.446 2.004 6.892 4.008 10.338 6.054 1.701-1.15 3.445-2.302 5.147-3.453L33.266 26.83v-4.306l16.335 9.465c.043-2.6.043-5.159.043-7.76z" fill="#fff" />
-            <path d="M17.314 24.229c0 8.058 0 10.02.042 18.078 5.318 3.027 10.592 6.054 15.91 9.039v-6.481c-3.318-1.876-6.594-3.752-9.912-5.586V20.775c-2 1.151-3.998 2.303-6.04 3.454z" fill="#fff" />
-          </svg>
-        </a>
-        <div class="footer__info">
-          <ul class="footer__additions">
-            <li class="footer__addition"><a href="#" class="footer__link">Whitepaper</a></li>
-            <li class="footer__addition"><a href="#" class="footer__link">Audit report</a></li>
-            <li class="footer__addition"><a href="#" class="footer__link">Tokenomics</a></li>
-          </ul>
-          <ul class="footer__additions">
-            <li class="footer__addition"><a href="#" class="footer__link">Careers</a></li>
-            <li class="footer__addition"><a href="#" class="footer__link">Terms of use</a></li>
-            <li class="footer__addition"><a href="#" class="footer__link">Privacy policy</a></li>
+    <footer id="footer" class="">
+      <div class="wrapper">
+        <div class="footer__navigation">
+          <a href="index.html" class="footer__logo">
+            <svg width="67" height="67" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <title>Logo</title>
+              <path d="M14.634 9.008a6.365 6.365 0 003.403.426c2.807-1.918 9.444-5.713 17.866-5.116 13.358.98 25.992 12.706 27.226 27.714 1.063 12.876-6.424 25.624-18.803 30.613-13.995 5.67-28.331-1.45-35.052-9.38-4.765-5.671-7.317-12.92-7.36-20.338 0-1.236-1.914-1.236-1.914 0 .128 13.942 8.806 26.605 21.908 31.508 13.187 4.946 28.587.725 37.477-10.19.17-.213.468-.554.766-.98.34-.427 6.764-9.167 6.849-20.338.042-10.787-5.913-22.128-15.782-28.183C33.904-5.872 12.08 4.275 12.08 6.876c0 .682 1.49 1.705 2.553 2.132z" fill="#fff" />
+              <path d="M49.644 24.23c-5.488-3.028-11.018-6.098-16.506-9.125-2.595 1.535-3.275 1.961-5.87 3.539V37.19c2 1.15 3.999 2.302 6.04 3.453v-7.376c3.446 2.004 6.892 4.008 10.338 6.054 1.701-1.15 3.445-2.302 5.147-3.453L33.266 26.83v-4.306l16.335 9.465c.043-2.6.043-5.159.043-7.76z" fill="#fff" />
+              <path d="M17.314 24.229c0 8.058 0 10.02.042 18.078 5.318 3.027 10.592 6.054 15.91 9.039v-6.481c-3.318-1.876-6.594-3.752-9.912-5.586V20.775c-2 1.151-3.998 2.303-6.04 3.454z" fill="#fff" />
+            </svg>
+          </a>
+          <div class="footer__info">
+            <ul class="footer__additions">
+              <li class="footer__addition"><a href="#" class="footer__link">Whitepaper</a></li>
+              <li class="footer__addition"><a href="#" class="footer__link">Audit report</a></li>
+              <li class="footer__addition"><a href="#" class="footer__link">Tokenomics</a></li>
+            </ul>
+            <ul class="footer__additions">
+              <li class="footer__addition"><a href="#" class="footer__link">Careers</a></li>
+              <li class="footer__addition"><a href="#" class="footer__link">Terms of use</a></li>
+              <li class="footer__addition"><a href="#" class="footer__link">Privacy policy</a></li>
+            </ul>
+          </div>
+          <ul class="footer__contacts">
+            <li class="footer__block">
+              <div class="footer__socmedia">
+                <ul class="footer__socblock">
+                  <li class="footer__soc"><a href="https://www.facebook.com/LiberaFound" class="footer__soclink" target="_blank">
+                      <svg class="footer__svg" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <title>Facebook</title>
+                        <path d="M16 32c8.837 0 16-7.163 16-16S24.837 0 16 0 0 7.163 0 16s7.163 16 16 16z" fill="#7289E9" />
+                        <path d="M20.5 8.4c0-.2-.2-.4-.4-.4h-2.2c-2.3-.1-4.2 1.6-4.4 3.9v2.4h-2.2c-.2 0-.4.2-.4.4V17c0 .2.2.4.4.4h2.2v5.9c0 .2.2.4.4.4h2.6c.2 0 .4-.2.4-.4v-5.9h2.3c.2 0 .4-.1.4-.3l.6-2.3c.1-.2-.1-.5-.3-.5H17v-2.4c0-.4.4-.8.9-.8h2.2c.2 0 .4-.2.4-.4V8.4z" fill="#fff" />
+                      </svg>
+                    </a></li>
+                  <li class="footer__soc"><a href="https://www.linkedin.com/company/liberafoundation" class="footer__soclink" target="_blank">
+                      <svg class="footer__svg" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <title>LinkedIn</title>
+                        <path d="M16 32c8.837 0 16-7.163 16-16S24.837 0 16 0 0 7.163 0 16s7.163 16 16 16z" fill="#7289E9" />
+                        <path d="M18.3 12.3c-2.8 0-5.1 2.3-5.1 5.1v5.1c0 .4.4.8.8.8h1.8c.4 0 .8-.4.8-.8v-5.1c0-.9.8-1.7 1.7-1.7h.2c.9.1 1.5.9 1.5 1.8v5.1c0 .4.4.8.8.8h1.8c.4 0 .8-.4.8-.8v-5.1c0-2.9-2.3-5.2-5.1-5.2zM8.4 13.1h2.4c.4 0 .8.4.8.8v8.7c0 .4-.4.8-.8.8H8.4c-.4 0-.8-.4-.8-.8v-8.7c0-.4.4-.8.8-.8zM9.6 11.6a2 2 0 100-4 2 2 0 000 4z" fill="#fff" />
+                      </svg>
+                    </a></li>
+                  <li class="footer__soc"><a href="https://twitter.com/LiberaFound" class="footer__soclink" target="_blank">
+                      <svg class="footer__svg" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <title>Twitter</title>
+                        <path d="M16 32c8.837 0 16-7.163 16-16S24.837 0 16 0 0 7.163 0 16s7.163 16 16 16z" fill="#7289E9" />
+                        <path d="M13.1 23.5c5.3.2 9.8-4 10-9.4v-.3c.6-.7 1-1.6 1.3-2.5.1-.2-.1-.4-.3-.5h-.3c-.6.3-1.4.2-1.9-.3-1.3-1.4-3.4-1.5-4.8-.2l-.1.1c-.9.9-1.3 2.2-1 3.4-2.9.3-4.9-1.1-6.5-3-.1-.2-.4-.2-.5-.1-.1.1-.1.2-.2.3-.6 3.5 1 7 4 8.8-1 1.1-2.4 1.9-3.9 2-.2 0-.4.2-.3.5 0 .1.1.2.2.3 1.4.5 2.8.9 4.3.9z" fill="#fff" />
+                      </svg>
+                    </a></li>
+                  <li class="footer__soc"><a href="https://t.me/+ChphX-EEe4RlODBi" class="footer__soclink" target="_blank">
+                      <svg class="footer__svg" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <title>Telegram</title>
+                        <path d="M16 32c8.837 0 16-7.163 16-16S24.837 0 16 0 0 7.163 0 16s7.163 16 16 16z" fill="#7289E9" />
+                        <path d="M8.146 15.018c5.23-2.276 12-5.052 12.935-5.436 2.45-1.006 3.203-.813 2.828 1.414-.27 1.6-1.046 6.9-1.666 10.198-.367 1.956-1.192 2.188-2.488 1.341-.624-.407-3.771-2.466-4.454-2.95-.624-.44-1.484-.97-.405-2.014.384-.372 2.9-2.748 4.86-4.598.256-.243-.066-.642-.363-.447a2276.876 2276.876 0 00-6.77 4.452c-.705.473-1.381.69-2.595.345-.918-.26-1.814-.571-2.163-.69-1.343-.456-1.024-1.047.28-1.615z" fill="#fff" />
+                      </svg>
+                    </a></li>
+                </ul>
+                <ul class="footer__socblock">
+                  <li class="footer__soc"><a href="https://www.youtube.com/channel/UCodZTRaIX3aYj7GnvQNy_6w" class="footer__soclink" target="_blank">
+                      <svg class="footer__svg" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <title>YouTube</title>
+                        <path d="M16 32c8.837 0 16-7.163 16-16S24.837 0 16 0 0 7.163 0 16s7.163 16 16 16z" fill="#7289E9" />
+                        <path d="M23.88 19.96c-.165.84-.864 1.48-1.729 1.6-1.357.2-3.62.44-6.172.44a45.1 45.1 0 01-6.172-.44c-.864-.12-1.564-.76-1.728-1.6A22.77 22.77 0 017.75 16c0-1.68.165-3.04.33-3.96.164-.84.863-1.48 1.727-1.6 1.358-.2 3.621-.44 6.172-.44 2.552 0 4.773.24 6.172.44.864.12 1.564.76 1.729 1.6.164.92.37 2.28.37 3.96-.041 1.68-.206 3.04-.37 3.96z" fill="#fff" />
+                        <path d="M14.125 18.838v-5.675c0-.28.31-.446.543-.29l4.257 2.837a.349.349 0 010 .581l-4.257 2.838a.35.35 0 01-.543-.29z" fill="#7289E9" />
+                      </svg>
+                    </a></li>
+                  <li class="footer__soc"><a href="https://www.reddit.com/user/LiberaFoundation" class="footer__soclink" target="_blank">
+                      <svg class="footer__svg" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <title>Reddit</title>
+                        <path d="M16 32c8.837 0 16-7.163 16-16S24.837 0 16 0 0 7.163 0 16s7.163 16 16 16z" fill="#7289E9" />
+                        <path d="M17.186 7.267a2.319 2.319 0 00-2.32 2.319v2.136c-1.741.093-3.334.557-4.606 1.285-.49-.47-1.146-.68-1.782-.679-.69 0-1.395.24-1.882.787l-.01.012-.012.013c-.467.583-.651 1.364-.527 2.14.114.708.524 1.42 1.237 1.885-.005.079-.017.155-.017.235 0 3.143 3.693 5.7 8.233 5.7 4.54 0 8.233-2.558 8.233-5.7 0-.08-.012-.156-.017-.235a2.787 2.787 0 001.237-1.885c.124-.776-.06-1.557-.527-2.14l-.011-.013-.011-.012c-.487-.547-1.192-.786-1.882-.787-.636 0-1.292.209-1.782.68-1.272-.729-2.865-1.193-4.607-1.286V9.586c0-.62.358-1.053 1.053-1.053.33 0 .732.166 1.36.386a7.738 7.738 0 002.11.432c.211.626.8 1.082 1.494 1.082.87 0 1.583-.712 1.583-1.583 0-.87-.712-1.583-1.583-1.583-.595 0-1.11.336-1.38.823a6.23 6.23 0 01-1.804-.366c-.572-.2-1.098-.457-1.78-.457zm-8.708 6.328c.25 0 .488.066.684.172-.7.584-1.23 1.265-1.55 2.01a1.463 1.463 0 01-.313-.698c-.068-.425.059-.867.26-1.129.192-.205.54-.355.919-.355zm14.043 0c.379 0 .728.15.92.355.201.262.328.704.26 1.13-.04.252-.143.487-.313.697-.32-.745-.85-1.426-1.55-2.01.196-.106.433-.172.683-.172zm-10.188 1.272a1.266 1.266 0 11.001 2.532 1.266 1.266 0 010-2.532zm6.334 0a1.266 1.266 0 110 2.532 1.266 1.266 0 010-2.532zm.15 3.504c-.404 1.182-1.698 2.196-3.317 2.196-1.619 0-2.913-1.013-3.318-2.11.729.59 1.942 1.012 3.318 1.012 1.376 0 2.59-.422 3.318-1.098z" fill="#fff" />
+                      </svg>
+                    </a></li>
+                  <li class="footer__soc"><a href="https://discord.gg/ED5Qmctd" class="footer__soclink" target="_blank">
+                      <svg class="footer__svg" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <title>Discord</title>
+                        <path d="M16 32c8.837 0 16-7.163 16-16S24.837 0 16 0 0 7.163 0 16s7.163 16 16 16z" fill="#7289E9" />
+                        <path d="M22.747 10.63c-1.616-1.298-4.172-1.518-4.28-1.527a.405.405 0 00-.402.238c-.003.005-.146.419-.284.818 1.878.329 3.154 1.058 3.222 1.098a.666.666 0 01-.67 1.153c-.019-.011-1.891-1.077-4.332-1.077S11.687 12.4 11.67 12.41a.666.666 0 01-.671-1.153c.068-.04 1.349-.772 3.232-1.1-.145-.404-.292-.811-.295-.816a.4.4 0 00-.402-.238c-.108.008-2.664.228-4.301 1.545-.856.79-2.565 5.413-2.565 9.41a.4.4 0 00.053.2c1.18 2.074 4.4 2.617 5.133 2.64h.012c.13 0 .252-.061.328-.166l.794-1.075c-1.74-.42-2.66-1.078-2.716-1.12a.667.667 0 01.788-1.075c.024.016 1.722 1.205 4.941 1.205 3.231 0 4.925-1.194 4.941-1.206a.668.668 0 01.789 1.076c-.055.04-.97.698-2.707 1.118l.784 1.076a.405.405 0 00.328.167h.012c.734-.024 3.953-.567 5.133-2.64a.4.4 0 00.053-.2c0-3.997-1.709-8.62-2.586-9.427zm-9.414 8.037C12.597 18.667 12 17.92 12 17c0-.92.597-1.667 1.333-1.667.737 0 1.334.746 1.334 1.667 0 .92-.597 1.667-1.334 1.667zm5.334 0c-.737 0-1.334-.746-1.334-1.667 0-.92.597-1.667 1.334-1.667.736 0 1.333.746 1.333 1.667 0 .92-.597 1.667-1.333 1.667z" fill="#fff" />
+                      </svg>
+                    </a></li>
+                  <li class="footer__soc"><a href="mailto:max@libera.foundation" class="footer__soclink" target="_blank">
+                      <svg class="footer__svg" width="32" height="32" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.2093 40C31.2265 40 40.1576 31.0457 40.1576 20C40.1576 8.9543 31.2265 0 20.2093 0C9.19215 0 0.260986 8.9543 0.260986 20C0.260986 31.0457 9.19215 40 20.2093 40Z" fill="#7289E9" />
+                        <path d="M11.6947 13C11.408 13 11.143 13.0893 10.9171 13.2321L19.5533 20.7411C19.9486 21.0848 20.483 21.0848 20.8739 20.7411L29.4971 13.2321C29.2755 13.0893 29.0105 13 28.7238 13H11.6947ZM10.3176 14.0089C10.2655 14.1607 10.2351 14.3259 10.2351 14.5V24.5C10.2351 24.7991 10.322 25.0759 10.4697 25.3125L16.6514 19.5223L10.3176 14.0089ZM30.1009 14.0089L23.7802 19.5179L29.9445 25.317C30.0922 25.0804 30.1791 24.8036 30.1791 24.5045V14.5045C30.1834 14.3259 30.153 14.1607 30.1009 14.0089ZM23.0373 20.1696L21.4995 21.5045C20.7566 22.1518 19.6663 22.1518 18.9234 21.5045L17.3943 20.1741L11.2603 25.9286C11.3993 25.9732 11.5427 26 11.6947 26H28.7238C28.8758 26 29.0192 25.9732 29.1582 25.9286L23.0373 20.1696Z" fill="white" />
+                      </svg>
+                    </a></li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </div>
-        <ul class="footer__contacts">
-          <li class="footer__block">
-            <div class="footer__socmedia">
-              <ul class="footer__socblock">
-                <li class="footer__soc"><a href="https://www.facebook.com/LiberaFound" class="footer__soclink" target="_blank">
-                    <svg class="footer__svg" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <title>Facebook</title>
-                      <path d="M16 32c8.837 0 16-7.163 16-16S24.837 0 16 0 0 7.163 0 16s7.163 16 16 16z" fill="#7289E9" />
-                      <path d="M20.5 8.4c0-.2-.2-.4-.4-.4h-2.2c-2.3-.1-4.2 1.6-4.4 3.9v2.4h-2.2c-.2 0-.4.2-.4.4V17c0 .2.2.4.4.4h2.2v5.9c0 .2.2.4.4.4h2.6c.2 0 .4-.2.4-.4v-5.9h2.3c.2 0 .4-.1.4-.3l.6-2.3c.1-.2-.1-.5-.3-.5H17v-2.4c0-.4.4-.8.9-.8h2.2c.2 0 .4-.2.4-.4V8.4z" fill="#fff" />
-                    </svg>
-                  </a></li>
-                <li class="footer__soc"><a href="https://www.linkedin.com/company/liberafoundation" class="footer__soclink" target="_blank">
-                    <svg class="footer__svg" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <title>LinkedIn</title>
-                      <path d="M16 32c8.837 0 16-7.163 16-16S24.837 0 16 0 0 7.163 0 16s7.163 16 16 16z" fill="#7289E9" />
-                      <path d="M18.3 12.3c-2.8 0-5.1 2.3-5.1 5.1v5.1c0 .4.4.8.8.8h1.8c.4 0 .8-.4.8-.8v-5.1c0-.9.8-1.7 1.7-1.7h.2c.9.1 1.5.9 1.5 1.8v5.1c0 .4.4.8.8.8h1.8c.4 0 .8-.4.8-.8v-5.1c0-2.9-2.3-5.2-5.1-5.2zM8.4 13.1h2.4c.4 0 .8.4.8.8v8.7c0 .4-.4.8-.8.8H8.4c-.4 0-.8-.4-.8-.8v-8.7c0-.4.4-.8.8-.8zM9.6 11.6a2 2 0 100-4 2 2 0 000 4z" fill="#fff" />
-                    </svg>
-                  </a></li>
-                <li class="footer__soc"><a href="https://twitter.com/LiberaFound" class="footer__soclink" target="_blank">
-                    <svg class="footer__svg" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <title>Twitter</title>
-                      <path d="M16 32c8.837 0 16-7.163 16-16S24.837 0 16 0 0 7.163 0 16s7.163 16 16 16z" fill="#7289E9" />
-                      <path d="M13.1 23.5c5.3.2 9.8-4 10-9.4v-.3c.6-.7 1-1.6 1.3-2.5.1-.2-.1-.4-.3-.5h-.3c-.6.3-1.4.2-1.9-.3-1.3-1.4-3.4-1.5-4.8-.2l-.1.1c-.9.9-1.3 2.2-1 3.4-2.9.3-4.9-1.1-6.5-3-.1-.2-.4-.2-.5-.1-.1.1-.1.2-.2.3-.6 3.5 1 7 4 8.8-1 1.1-2.4 1.9-3.9 2-.2 0-.4.2-.3.5 0 .1.1.2.2.3 1.4.5 2.8.9 4.3.9z" fill="#fff" />
-                    </svg>
-                  </a></li>
-                <li class="footer__soc"><a href="https://t.me/+ChphX-EEe4RlODBi" class="footer__soclink" target="_blank">
-                    <svg class="footer__svg" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <title>Telegram</title>
-                      <path d="M16 32c8.837 0 16-7.163 16-16S24.837 0 16 0 0 7.163 0 16s7.163 16 16 16z" fill="#7289E9" />
-                      <path d="M8.146 15.018c5.23-2.276 12-5.052 12.935-5.436 2.45-1.006 3.203-.813 2.828 1.414-.27 1.6-1.046 6.9-1.666 10.198-.367 1.956-1.192 2.188-2.488 1.341-.624-.407-3.771-2.466-4.454-2.95-.624-.44-1.484-.97-.405-2.014.384-.372 2.9-2.748 4.86-4.598.256-.243-.066-.642-.363-.447a2276.876 2276.876 0 00-6.77 4.452c-.705.473-1.381.69-2.595.345-.918-.26-1.814-.571-2.163-.69-1.343-.456-1.024-1.047.28-1.615z" fill="#fff" />
-                    </svg>
-                  </a></li>
-              </ul>
-              <ul class="footer__socblock">
-                <li class="footer__soc"><a href="https://www.youtube.com/channel/UCodZTRaIX3aYj7GnvQNy_6w" class="footer__soclink" target="_blank">
-                    <svg class="footer__svg" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <title>YouTube</title>
-                      <path d="M16 32c8.837 0 16-7.163 16-16S24.837 0 16 0 0 7.163 0 16s7.163 16 16 16z" fill="#7289E9" />
-                      <path d="M23.88 19.96c-.165.84-.864 1.48-1.729 1.6-1.357.2-3.62.44-6.172.44a45.1 45.1 0 01-6.172-.44c-.864-.12-1.564-.76-1.728-1.6A22.77 22.77 0 017.75 16c0-1.68.165-3.04.33-3.96.164-.84.863-1.48 1.727-1.6 1.358-.2 3.621-.44 6.172-.44 2.552 0 4.773.24 6.172.44.864.12 1.564.76 1.729 1.6.164.92.37 2.28.37 3.96-.041 1.68-.206 3.04-.37 3.96z" fill="#fff" />
-                      <path d="M14.125 18.838v-5.675c0-.28.31-.446.543-.29l4.257 2.837a.349.349 0 010 .581l-4.257 2.838a.35.35 0 01-.543-.29z" fill="#7289E9" />
-                    </svg>
-                  </a></li>
-                <li class="footer__soc"><a href="https://www.reddit.com/user/LiberaFoundation" class="footer__soclink" target="_blank">
-                    <svg class="footer__svg" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <title>Reddit</title>
-                      <path d="M16 32c8.837 0 16-7.163 16-16S24.837 0 16 0 0 7.163 0 16s7.163 16 16 16z" fill="#7289E9" />
-                      <path d="M17.186 7.267a2.319 2.319 0 00-2.32 2.319v2.136c-1.741.093-3.334.557-4.606 1.285-.49-.47-1.146-.68-1.782-.679-.69 0-1.395.24-1.882.787l-.01.012-.012.013c-.467.583-.651 1.364-.527 2.14.114.708.524 1.42 1.237 1.885-.005.079-.017.155-.017.235 0 3.143 3.693 5.7 8.233 5.7 4.54 0 8.233-2.558 8.233-5.7 0-.08-.012-.156-.017-.235a2.787 2.787 0 001.237-1.885c.124-.776-.06-1.557-.527-2.14l-.011-.013-.011-.012c-.487-.547-1.192-.786-1.882-.787-.636 0-1.292.209-1.782.68-1.272-.729-2.865-1.193-4.607-1.286V9.586c0-.62.358-1.053 1.053-1.053.33 0 .732.166 1.36.386a7.738 7.738 0 002.11.432c.211.626.8 1.082 1.494 1.082.87 0 1.583-.712 1.583-1.583 0-.87-.712-1.583-1.583-1.583-.595 0-1.11.336-1.38.823a6.23 6.23 0 01-1.804-.366c-.572-.2-1.098-.457-1.78-.457zm-8.708 6.328c.25 0 .488.066.684.172-.7.584-1.23 1.265-1.55 2.01a1.463 1.463 0 01-.313-.698c-.068-.425.059-.867.26-1.129.192-.205.54-.355.919-.355zm14.043 0c.379 0 .728.15.92.355.201.262.328.704.26 1.13-.04.252-.143.487-.313.697-.32-.745-.85-1.426-1.55-2.01.196-.106.433-.172.683-.172zm-10.188 1.272a1.266 1.266 0 11.001 2.532 1.266 1.266 0 010-2.532zm6.334 0a1.266 1.266 0 110 2.532 1.266 1.266 0 010-2.532zm.15 3.504c-.404 1.182-1.698 2.196-3.317 2.196-1.619 0-2.913-1.013-3.318-2.11.729.59 1.942 1.012 3.318 1.012 1.376 0 2.59-.422 3.318-1.098z" fill="#fff" />
-                    </svg>
-                  </a></li>
-                <li class="footer__soc"><a href="https://discord.gg/ED5Qmctd" class="footer__soclink" target="_blank">
-                    <svg class="footer__svg" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <title>Discord</title>
-                      <path d="M16 32c8.837 0 16-7.163 16-16S24.837 0 16 0 0 7.163 0 16s7.163 16 16 16z" fill="#7289E9" />
-                      <path d="M22.747 10.63c-1.616-1.298-4.172-1.518-4.28-1.527a.405.405 0 00-.402.238c-.003.005-.146.419-.284.818 1.878.329 3.154 1.058 3.222 1.098a.666.666 0 01-.67 1.153c-.019-.011-1.891-1.077-4.332-1.077S11.687 12.4 11.67 12.41a.666.666 0 01-.671-1.153c.068-.04 1.349-.772 3.232-1.1-.145-.404-.292-.811-.295-.816a.4.4 0 00-.402-.238c-.108.008-2.664.228-4.301 1.545-.856.79-2.565 5.413-2.565 9.41a.4.4 0 00.053.2c1.18 2.074 4.4 2.617 5.133 2.64h.012c.13 0 .252-.061.328-.166l.794-1.075c-1.74-.42-2.66-1.078-2.716-1.12a.667.667 0 01.788-1.075c.024.016 1.722 1.205 4.941 1.205 3.231 0 4.925-1.194 4.941-1.206a.668.668 0 01.789 1.076c-.055.04-.97.698-2.707 1.118l.784 1.076a.405.405 0 00.328.167h.012c.734-.024 3.953-.567 5.133-2.64a.4.4 0 00.053-.2c0-3.997-1.709-8.62-2.586-9.427zm-9.414 8.037C12.597 18.667 12 17.92 12 17c0-.92.597-1.667 1.333-1.667.737 0 1.334.746 1.334 1.667 0 .92-.597 1.667-1.334 1.667zm5.334 0c-.737 0-1.334-.746-1.334-1.667 0-.92.597-1.667 1.334-1.667.736 0 1.333.746 1.333 1.667 0 .92-.597 1.667-1.333 1.667z" fill="#fff" />
-                    </svg>
-                  </a></li>
-                <li class="footer__soc"><a href="mailto:max@libera.foundation" class="footer__soclink" target="_blank">
-                    <svg class="footer__svg" width="32" height="32" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20.2093 40C31.2265 40 40.1576 31.0457 40.1576 20C40.1576 8.9543 31.2265 0 20.2093 0C9.19215 0 0.260986 8.9543 0.260986 20C0.260986 31.0457 9.19215 40 20.2093 40Z" fill="#7289E9" />
-                      <path d="M11.6947 13C11.408 13 11.143 13.0893 10.9171 13.2321L19.5533 20.7411C19.9486 21.0848 20.483 21.0848 20.8739 20.7411L29.4971 13.2321C29.2755 13.0893 29.0105 13 28.7238 13H11.6947ZM10.3176 14.0089C10.2655 14.1607 10.2351 14.3259 10.2351 14.5V24.5C10.2351 24.7991 10.322 25.0759 10.4697 25.3125L16.6514 19.5223L10.3176 14.0089ZM30.1009 14.0089L23.7802 19.5179L29.9445 25.317C30.0922 25.0804 30.1791 24.8036 30.1791 24.5045V14.5045C30.1834 14.3259 30.153 14.1607 30.1009 14.0089ZM23.0373 20.1696L21.4995 21.5045C20.7566 22.1518 19.6663 22.1518 18.9234 21.5045L17.3943 20.1741L11.2603 25.9286C11.3993 25.9732 11.5427 26 11.6947 26H28.7238C28.8758 26 29.0192 25.9732 29.1582 25.9286L23.0373 20.1696Z" fill="white" />
-                    </svg>
-                  </a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
       </div>
     </footer>
     <!-- MODAL -->
@@ -726,6 +785,7 @@
       </div>
     </div>
     <script src="./js/libs/lib_pet.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/js.js"></script>
   </body>
 </html>
